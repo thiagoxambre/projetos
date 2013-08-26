@@ -12,23 +12,23 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.helpdesk.model.Modulo;
-import br.com.helpdesk.model.ModuloDao;
+import br.com.helpdesk.model.ModuloDAO;
 import br.com.helpdesk.model.Sistema;
-import br.com.helpdesk.model.SistemaDao;
+import br.com.helpdesk.model.SistemaDAO;
 
 @Controller
 @Transactional
 public class ModuloController {
 
 	@Autowired
-	private ModuloDao dao;
+	private ModuloDAO dao;
 	
 	@Autowired
-	private SistemaDao daoSistema;
+	private SistemaDAO daoSistema;
 	
 	@RequestMapping("formAdicionarModulo")
 	public String formAdiciona(Model model) {
-		List<Sistema> sistemas = daoSistema.lista();
+		List<Sistema> sistemas = daoSistema.lista(Sistema.class);
 		model.addAttribute("sistemas", sistemas);
 		return "modulo/adicionar";
 	}
@@ -48,7 +48,7 @@ public class ModuloController {
 	
 	@RequestMapping("listarModulos")
 	public String lista(Model model) {
-		List<Modulo> modulos = dao.lista();
+		List<Modulo> modulos = dao.lista(Modulo.class);
 		model.addAttribute("modulos", modulos);
 		
 		return "modulo/lista";
@@ -65,7 +65,7 @@ public class ModuloController {
 	@RequestMapping("mostraModulo")
 	public String mostra(Long id, Model model) {
 		// Carrega sistemas para o combobox
-		List<Sistema> sistemas = daoSistema.lista();
+		List<Sistema> sistemas = daoSistema.lista(Sistema.class);
 		model.addAttribute("sistemas", sistemas);
 
 		model.addAttribute("modulo", dao.getById(id));

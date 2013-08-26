@@ -4,9 +4,8 @@
   <groupId>br.com</groupId>
   <artifactId>helpdesk</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>helpdesk Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+  <version>0.0.1-RELEASE</version>
+  <name>HelpDesk</name>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -109,7 +108,12 @@
 		<artifactId>hibernate-entitymanager</artifactId>
 		<version>4.2.4.Final</version>
 	</dependency>
-                                    
+	<dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>jstl</artifactId>
+    	<version>1.2</version>
+    	<scope>provided</scope>
+	</dependency>                                                
                         	
   </dependencies>
   <build>
@@ -118,4 +122,7 @@
   <properties>
   	<spring-version>3.1.0.RELEASE</spring-version>
   </properties>
+  <organization>
+  	<name>Callegari Solutions ©</name>
+  </organization>
 </project>

@@ -14,27 +14,14 @@ import javax.validation.constraints.Size;
 @SuppressWarnings("serial")
 @Entity
 @Table(name="sistema")
-public class Sistema implements Serializable {
+public class Sistema extends AbstractEntity implements Serializable {
 	
-	@Id
-	@GeneratedValue
-	private Long id;
-
 	@NotNull(message="Nome deve ser preenchido") @Size(min=1,message="Nome deve ser preenchido")
 	private String nome;
 	
 	@OneToMany(mappedBy="sistema", fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	private Collection<Modulo> modulos;
 	
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 	public String getNome() {
 		return nome;
 	}

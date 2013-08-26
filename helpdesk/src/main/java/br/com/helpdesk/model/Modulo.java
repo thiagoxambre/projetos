@@ -9,11 +9,7 @@ import javax.validation.constraints.Size;
 @SuppressWarnings("serial")
 @Entity
 @Table(name="modulo")
-public class Modulo implements Serializable {
-	
-	@Id
-	@GeneratedValue
-	private Long id;
+public class Modulo extends AbstractEntity implements Serializable {
 	
 	@NotNull(message="Nome deve ser preechido") @Size(min=1,message="Nome deve ser preenchido")
 	private String nome;
@@ -21,14 +17,6 @@ public class Modulo implements Serializable {
 	@ManyToOne(targetEntity=Sistema.class)
 	@JoinColumn(name="sistema_id")
 	private Sistema sistema;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getNome() {
 		return nome;

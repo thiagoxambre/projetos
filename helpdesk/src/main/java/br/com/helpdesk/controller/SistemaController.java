@@ -12,7 +12,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.helpdesk.model.Sistema;
-import br.com.helpdesk.model.SistemaDao;
+import br.com.helpdesk.model.SistemaDAO;
 
 @Controller
 @Transactional
@@ -20,7 +20,7 @@ public class SistemaController {
 
 	
 	@Autowired
-	private SistemaDao dao;
+	private SistemaDAO dao;
 	
 	@RequestMapping("formAdicionarSistema")
 	public String formAdiciona() {
@@ -40,7 +40,7 @@ public class SistemaController {
 	
 	@RequestMapping("listarSistemas")
 	public String lista(Model model) {
-		List<Sistema> sistemas = dao.lista();
+		List<Sistema> sistemas = dao.lista(Sistema.class);
 		model.addAttribute("sistemas", sistemas);
 		
 		return "sistema/lista";
