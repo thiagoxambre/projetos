@@ -1,4 +1,4 @@
-package br.com.helpdesk.model;
+package br.com.helpdesk.model.util;
 
 
 import java.util.List;

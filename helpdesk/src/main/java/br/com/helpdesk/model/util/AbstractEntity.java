@@ -1,4 +1,4 @@
-package br.com.helpdesk.model;
+package br.com.helpdesk.model.util;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

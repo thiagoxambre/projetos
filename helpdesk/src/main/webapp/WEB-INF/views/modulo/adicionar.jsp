@@ -13,18 +13,23 @@
 <c:import url="/util/cabecalho.jsp" />
 <h3>Adicionar Módulo</h3>
 <form action="adicionarModulo" method="get">
-	Sistema:<select name="idSistema">
-		<option value="">-</option>
-		<c:forEach items="${sistemas}" var="sistema">
-			<option value="${sistema.id}">${sistema.nome}</option>
-		</c:forEach>
-	</select>
-		<br/>
-	Nome:<input type="text" name="nome">
-		<br/>
-	<form:errors path="modulo.nome" cssStyle="color:red" /> 
-		<br/>	
-	<input type="submit" value="Adicionar">
+	<table>
+	<tr>
+		<td>Sistema:</td>
+		<td><select name="idSistema">
+			<option value="">-</option>
+			<c:forEach items="${sistemas}" var="sistema">
+				<option value="${sistema.id}">${sistema.nome}</option>
+			</c:forEach>
+		</select></td>
+	</tr>
+	<tr>
+		<td>Nome:</td>
+		<td><input type="text" name="nome"></td>
+		<td></td><td><form:errors path="modulo.nome" cssStyle="color:red" /></td> 
+	</tr>
+	<tr><td></td><td><input type="submit" value="Adicionar"></td></tr>
+	</table>
 </form>
 
 <c:import url="/util/rodape.jsp" />

@@ -6,8 +6,7 @@
 
 	<persistence-unit name="helpdesk">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<class>br.com.helpdesk.model.Sistema</class>
-		<class>br.com.helpdesk.model.Modulo</class>
+
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
 			<property name="hibernate.show_sql" value="true" />

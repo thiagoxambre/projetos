@@ -10,6 +10,7 @@
 <P> Menu </P>
 <a href="listarSistemas">Sistemas</a><br/>
 <a href="listarModulos">Módulos</a><br/>
+<a href="listarEmpresas">Empresas</a><br/>
 
 <c:import url="/util/rodape.jsp" />
 </body>

@@ -11,8 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.com.helpdesk.model.Sistema;
-import br.com.helpdesk.model.SistemaDAO;
+import br.com.helpdesk.model.dao.SistemaDAO;
+import br.com.helpdesk.model.entity.Sistema;
 
 @Controller
 @Transactional

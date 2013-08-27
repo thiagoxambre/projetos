@@ -1,26 +1,22 @@
-package br.com.helpdesk.model;
+package br.com.helpdesk.model.entity;
 
-import java.io.Serializable;
-import java.util.Collection;
-
-
-
-
+import java.util.List;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@SuppressWarnings("serial")
+import br.com.helpdesk.model.util.AbstractEntity;
+
 @Entity
 @Table(name="sistema")
-public class Sistema extends AbstractEntity implements Serializable {
+public class Sistema extends AbstractEntity {
 	
 	@NotNull(message="Nome deve ser preenchido") @Size(min=1,message="Nome deve ser preenchido")
 	private String nome;
 	
-	@OneToMany(mappedBy="sistema", fetch=FetchType.LAZY, cascade=CascadeType.ALL)
-	private Collection<Modulo> modulos;
+	@OneToMany(mappedBy="sistema", fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+	private List<Modulo> modulos;
 	
 	public String getNome() {
 		return nome;
@@ -30,11 +26,11 @@ public class Sistema extends AbstractEntity implements Serializable {
 		this.nome = nome;
 	}
 
-	public Collection<Modulo> getModulos() {
+	public List<Modulo> getModulos() {
 		return modulos;
 	}
 
-	public void setModulos(Collection<Modulo> modulos) {
+	public void setModulos(List<Modulo> modulos) {
 		this.modulos = modulos;
 	}
 	
