@@ -26,6 +26,7 @@
 		<td>${empresa.cidade}</td>
 		<td><a href="mostraEmpresa?id=${empresa.id}">Alterar</a></td>
 		<td><a href="removerEmpresa?id=${empresa.id}">Remover</a></td>
+		<td><a href="formVinculaModuloEmpresa?id=${empresa.id}">Vincular Módulos</a></td>
 	</tr>
 	</c:forEach>
 </table> <br/>

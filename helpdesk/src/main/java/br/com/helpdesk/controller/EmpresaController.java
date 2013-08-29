@@ -40,19 +40,14 @@ public class EmpresaController {
 	}
 	
 	@RequestMapping("adicionarEmpresa")
-	public String adiciona(@Valid Empresa empresa, List<Long> modulos, BindingResult result) {
-		for (Long idModulo : modulos) {
-			Modulo modulo = new Modulo();
-			modulo = daoModulo.getById(idModulo);
-			empresa.getModulos().add(modulo);
-		}
+	public String adiciona(@Valid Empresa empresa, BindingResult result) {
 		if(result.hasErrors()) {
-			return "modulo/adicionar";
+			return "empresa/adicionar";
 		}
 		
 		dao.adiciona(empresa);
 		
-		return "modulo/adicionado";
+		return "empresa/adicionado";
 	}
 
 	@RequestMapping("listarEmpresas")
@@ -62,5 +57,52 @@ public class EmpresaController {
 		
 		return "empresa/lista";
 	}
+	
+	@RequestMapping("removerEmpresa")
+	public String remove(Empresa empresa) {
+		dao.remove(empresa);
+		
+		return "redirect:listarEmpresas";
+		
+	}
+	
+	@RequestMapping("mostraEmpresa")
+	public String mostra(Long id, Model model) {
+		model.addAttribute("empresa", dao.getById(id));
+		
+		return "empresa/mostra";
+	}
+	
+	@RequestMapping("alterarEmpresa")
+	public String alterar(@Valid Empresa empresa,BindingResult result) {
+		if (result.hasErrors()) {
+			return "empresa/mostra";
+		}
+		dao.altera(empresa);
+		
+		
+		return "redirect:listarEmpresas";
+	}
+	
+	@RequestMapping("formVinculaModuloEmpresa")
+	public String formVinculaModuloEmpresa(Long id, Model model) {
+		model.addAttribute("empresa", dao.getById(id));
+		model.addAttribute("sistemas", daoSistema.lista(Sistema.class));
+		return "empresa/vinculamodulo";
+	}
+	
+	
+	@RequestMapping("adicionarModuloEmpresa")
+	public String adicionaModuloEmpresa(Model model, Long idEmpresa, Long idModulo) {
+		Empresa empresa = dao.getById(idEmpresa);
+		Modulo modulo = daoModulo.getById(idModulo);
+		empresa.getModulos().add(modulo);
+		dao.altera(empresa);
+
+		model.addAttribute("empresa", empresa);
+		model.addAttribute("sistemas", daoSistema.lista(Sistema.class));
+		return "redirect:formVinculaModuloEmpresa";
+	}
+	
 	
 }

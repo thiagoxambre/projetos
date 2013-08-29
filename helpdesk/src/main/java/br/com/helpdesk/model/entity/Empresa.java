@@ -6,6 +6,8 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Email;
+
 import br.com.helpdesk.model.util.AbstractEntity;
 
 @Entity
@@ -16,11 +18,15 @@ public class Empresa extends AbstractEntity {
 	private String nome;
 
 	private String fone;
+	private String endereco;
 	private String cidade;
+	
+	@Email(message="Email inválido")
 	private String email;
+	
 	private String responsavel;
 
-	@ManyToMany
+	@ManyToMany(fetch=FetchType.EAGER)
 	@JoinTable(name="empresa_modulo", joinColumns = @JoinColumn(columnDefinition="empresa_id"), inverseJoinColumns = @JoinColumn(columnDefinition="modulo_id"))
 	private List<Modulo> modulos;
 
@@ -38,6 +44,14 @@ public class Empresa extends AbstractEntity {
 
 	public void setFone(String fone) {
 		this.fone = fone;
+	}
+	
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
 	public String getCidade() {
