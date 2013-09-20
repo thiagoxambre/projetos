@@ -15,6 +15,9 @@
 	<tr>
 		<th>Id</th>
 		<th>Nome</th>
+		<th></th>
+		<th></th>
+		
 	</tr>
 	<c:forEach items="${sistemas}" var="sistema">
 	<tr>

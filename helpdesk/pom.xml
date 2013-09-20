@@ -4,8 +4,9 @@
   <groupId>br.com</groupId>
   <artifactId>helpdesk</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-RELEASE</version>
-  <name>HelpDesk</name>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>helpdesk Maven Webapp</name>
+  <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -21,7 +22,7 @@
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-web</artifactId>
-		<version>${spring-version}</version>
+		<version>3.1.0.RELEASE</version>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework</groupId>
@@ -58,7 +59,7 @@
 		<artifactId>spring-instrument</artifactId>
 		<version>${spring-version}</version>
 	</dependency>
-	<dependency>
+   	<dependency>
 		<groupId>commons-dbcp</groupId>
 		<artifactId>commons-dbcp</artifactId>
 		<version>1.4</version>
@@ -112,9 +113,38 @@
     	<groupId>javax.servlet</groupId>
     	<artifactId>jstl</artifactId>
     	<version>1.2</version>
-    	<scope>provided</scope>
 	</dependency>                                                
-                        	
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>3.1.0</version>
+	</dependency>
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>3.0.1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-core</artifactId>
+		<version>${spring-version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-web</artifactId>
+		<version>${spring-version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-config</artifactId>
+		<version>${spring-version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-taglibs</artifactId>
+		<version>${spring-version}</version>
+	</dependency>
+
   </dependencies>
   <build>
     <finalName>helpdesk</finalName>
@@ -123,6 +153,7 @@
   	<spring-version>3.1.0.RELEASE</spring-version>
   </properties>
   <organization>
-  	<name>Callegari Solutions ©</name>
+  	<name>Callegari Solutions Â©</name>
   </organization>
+  
 </project>
