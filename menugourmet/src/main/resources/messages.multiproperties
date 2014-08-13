@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MultiProperties xmlns="hu.skzs.multiproperties">
+    <Version>1.2</Version>
+    <Name>I18n</Name>
+    <Description></Description>
+    <Handler>Java Properties Handler</Handler>
+    <Columns>
+        <Key>
+            <Width>200</Width>
+        </Key>
+        <Column>
+            <Name>pt</Name>
+            <Description>Português - Brasil	</Description>
+            <Width>150</Width>
+            <HandlerConfiguration>/menugourmet/src/main/resources/messages_pt.properties|true|true|false|false</HandlerConfiguration>
+        </Column>
+        <Column>
+            <Name>en</Name>
+            <Description>Inglês</Description>
+            <Width>150</Width>
+            <HandlerConfiguration>/menugourmet/src/main/resources/messages_en.properties|false|false|false|false</HandlerConfiguration>
+        </Column>
+    </Columns>
+    <Records>
+        <Property>
+            <Name>rodape.developed</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Desenvolvido por Callegari Solutions &amp;copy; &lt;span id=&quot;spanYear&quot;&gt;&lt;/span&gt; &lt;a href=&quot;&quot;&gt;www.callegarisolutions.com.br&lt;/a&gt;. Todos os Direitos Reservados.</Value>
+            <Value disabled="false">Developed by Callegari Solutions &amp;copy; &lt;span id=&quot;spanYear&quot;&gt;&lt;/span&gt; &lt;a href=&quot;&quot;&gt;www.callegarisolutions.com.br&lt;/a&gt;. All rights reserved.</Value>
+        </Property>
+        <Property>
+            <Name>label.login.login</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Login</Value>
+            <Value disabled="false">Login</Value>
+        </Property>
+        <Property>
+            <Name>label.login.password</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Senha</Value>
+            <Value disabled="false">Password</Value>
+        </Property>
+        <Property>
+            <Name>label.business.id</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Id</Value>
+            <Value disabled="false">Id</Value>
+        </Property>
+        <Property>
+            <Name>label.business.address</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Endereço</Value>
+            <Value disabled="false">Address</Value>
+        </Property>
+        <Property>
+            <Name>label.business.city</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Cidade</Value>
+            <Value disabled="false">City</Value>
+        </Property>
+        <Property>
+            <Name>label.business.cnpj</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">CNPJ</Value>
+            <Value disabled="false">CNPJ</Value>
+        </Property>
+        <Property>
+            <Name>label.business.logo</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Logomarca</Value>
+            <Value disabled="false">Logo</Value>
+        </Property>
+        <Property>
+            <Name>label.business.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Nome</Value>
+            <Value disabled="false">Name</Value>
+        </Property>
+        <Property>
+            <Name>label.business.phone</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Fone</Value>
+            <Value disabled="false">Phone</Value>
+        </Property>
+        <Property>
+            <Name>label.business.uf</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">UF</Value>
+            <Value disabled="false">State</Value>
+        </Property>
+        <Property>
+            <Name>label.options</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Opções</Value>
+            <Value disabled="false">Options</Value>
+        </Property>
+        <Property>
+            <Name>label.alter</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Alterar</Value>
+            <Value disabled="false">Alter</Value>
+        </Property>
+        <Property>
+            <Name>label.insert</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Inserir</Value>
+            <Value disabled="false">Insert</Value>
+        </Property>
+        <Property>
+            <Name>label.save</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Salvar</Value>
+            <Value disabled="false">Save</Value>
+        </Property>
+        <Property>
+            <Name>label.delete</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Deletar</Value>
+            <Value disabled="false">Delete</Value>
+        </Property>
+        <Property>
+            <Name>label.pages</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Páginas</Value>
+            <Value disabled="false">Pages</Value>
+        </Property>
+        <Property>
+            <Name>label.rows</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Nº de Linhas</Value>
+            <Value disabled="false">Rows</Value>
+        </Property>
+        <Property>
+            <Name>label.businesses</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Empresas</Value>
+            <Value disabled="false">Businesses</Value>
+        </Property>
+        <Property>
+            <Name>label.business</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Empresa</Value>
+            <Value disabled="false">Business</Value>
+        </Property>
+    </Records>
+</MultiProperties>
